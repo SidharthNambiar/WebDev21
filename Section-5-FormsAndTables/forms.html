@@ -7,15 +7,29 @@
     <title>Forms Demo</title>
   </head>
   <body>
+    <!-- Will not submit -->
+    <p>
+      <label for="1">Outside FORM</label>
+      <button id="1">Will Not Submit</button>
+    </p>
     <h1>Forms Demo</h1>
-    <form action="">
+    <form action="/tacos">
       <p>
-        <label for="username">Enter Username</label>
+        <label for="username">Enter Username:</label>
         <input id="username" type="text" placeholder="username" />
       </p>
       <p>
-        <label for="password">Enter Password</label>
+        <label for="2">Inside FORM - Default:</label>
+        <button id="2">Will Submit</button>
+      </p>
+      <p>
+        <label for="password">Enter Password:</label>
         <input id="password" type="password" placeholder="password" />
+      </p>
+
+      <p>
+        <label for="3">Inside Form - Modified:</label>
+        <button id="3" type="button">Will Not Submit</button>
       </p>
       <p>
         <label for="color">Pick a color:</label>
@@ -24,6 +38,16 @@
       <p>
         <label for="quantity">Choose a quantity:</label>
         <input id="quantity" type="number" placeholder="quantity" />
+      </p>
+
+      <p>
+        <label for="4">Button via Input</label>
+        <input id="4" type="submit" value="Will Submit" />
+      </p>
+
+      <p>
+        <label for="5">Button via Input</label>
+        <input id="5" type="button" value="Will Not Submit" />
       </p>
     </form>
   </body>
