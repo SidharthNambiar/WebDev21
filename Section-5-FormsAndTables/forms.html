@@ -85,5 +85,33 @@
       <input id="reddit" type="text" name="q" />
       <button>Search Forums</button>
     </form>
+
+    <form action="/fish">
+      <label for="tos">I agree to the terms of service:</label>
+      <input type="checkbox" name="agree_to_tos" id="tos" checked />
+      <button>Submit</button>
+    </form>
+
+    <form action="/shirts">
+      <label for="shirts">Select Your Size:</label>
+      <label for="s">S</label>
+      <input type="radio" name="shirt_sizes" id="s" value="small" />
+      <label for="m">M</label>
+      <input type="radio" name="shirt_sizes" id="m" value="medium" />
+      <label for="l">L</label>
+      <input type="radio" name="shirt_sizes" id="l" value="large" />
+      <button>Submit</button>
+    </form>
+
+    <form action="/cuisine">
+      <label for="meal_choice">Please select your cuisine of choice:</label>
+      <select name="meals" id="meal_choice">
+        <option value="Indian">Indian</option>
+        <option value="Thai">Thai</option>
+        <option value="French">French</option>
+        <option value="" selected>Please Select A Cuisine From Below</option>
+      </select>
+      <button>Submit</button>
+    </form>
   </body>
 </html>
