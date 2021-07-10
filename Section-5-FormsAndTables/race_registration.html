@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Race Registration Form</title>
+  </head>
+
+  <body>
+    <h1>Race Registration!</h1>
+
+    <form action="/register">
+      <div>
+        <label for="firstname">First Name</label>
+        <input
+          type="text"
+          id="firstname"
+          placeholder="first"
+          name="user_firstname"
+          required
+        />
+
+        <label for="lastname">Last Name</label>
+        <input
+          type="text"
+          id="lastname"
+          placeholder="last"
+          name="user_lastname"
+          required
+        />
+      </div>
+
+      <div>
+        <p>
+          <label for="race_type">Select a Race:</label>
+        </p>
+
+        <div>
+          <input type="radio" id="5k" name="marathon" required />
+          <label for="5k">Fun Run 5k</label>
+        </div>
+
+        <div>
+          <input type="radio" id="half" name="marathon" required />
+          <label for="half">Half Marathon</label>
+        </div>
+
+        <div>
+          <input type="radio" id="full" name="marathon" required />
+          <label for="full">Full Marathon</label>
+        </div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="user_email" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" required />
+
+        <div>
+          <label for="age">Select Age Group</label>
+          <select name="age_group" id="age">
+            <option value="under 18" selected>under 18</option>
+            <option value="18-30">18-30</option>
+            <option value="30-50">30-50</option>
+            <option value="50+">50+</option>
+          </select>
+        </div>
+
+        <div>
+          <button>Register!</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
