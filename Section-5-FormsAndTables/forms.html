@@ -21,6 +21,7 @@
           type="text"
           placeholder="username"
           name="username"
+          required
         />
       </p>
       <p>
@@ -121,14 +122,53 @@
 
     <form action="/volume">
       <label for="vol">Adjust the volume:</label>
-      <input type="range" name="volume_level" id="vol" min="0" max="100" value="40" step="10" />
+      <input
+        type="range"
+        name="volume_level"
+        id="vol"
+        min="0"
+        max="100"
+        value="40"
+        step="10"
+      />
       <button>SET</button>
     </form>
 
     <form action="/Reviews">
-        <label for="feedback">Please leave your feedback below:</label> <br>
-        <textarea name="user_review" id="feedback" cols="50" rows="20" placeholder="What did you think of our service?" ></textarea> <br>
-        <button>Submit</button>
+      <label for="feedback">Please leave your feedback below:</label> <br />
+      <textarea
+        name="user_review"
+        id="feedback"
+        cols="50"
+        rows="20"
+        placeholder="What did you think of our service?"
+      ></textarea>
+      <br />
+      <button>Submit</button>
+    </form>
+
+    <form action="/email">
+      <label for="email">Enter email:</label>
+      <input
+        type="email"
+        id="email"
+        placeholder="Please enter your email."
+        required
+        name="email"
+      />
+      <button>Submit</button>
+    </form>
+
+    <form action="/sales">
+      <label for="sales">What site did you see our product on?</label>
+      <input
+        type="url"
+        name="site"
+        id="sales"
+        placeholder="Enter site name"
+        required
+      />
+      <button>Submit</button>
     </form>
   </body>
 </html>
