@@ -52,6 +52,10 @@
           type="number"
           placeholder="quantity"
           name="quantity"
+          max="1000"
+          min="50"
+          step="25"
+          value="250"
         />
       </p>
 
@@ -113,6 +117,18 @@
         <option value="" selected>Please Select A Cuisine From Below</option>
       </select>
       <button>Submit</button>
+    </form>
+
+    <form action="/volume">
+      <label for="vol">Adjust the volume:</label>
+      <input type="range" name="volume_level" id="vol" min="0" max="100" value="40" step="10" />
+      <button>SET</button>
+    </form>
+
+    <form action="/Reviews">
+        <label for="feedback">Please leave your feedback below:</label> <br>
+        <textarea name="user_review" id="feedback" cols="50" rows="20" placeholder="What did you think of our service?" ></textarea> <br>
+        <button>Submit</button>
     </form>
   </body>
 </html>
