@@ -1,11 +1,11 @@
 h3 {
     color: rgb(12, 243, 12);
-    background-color: black;
+    background-color: #000000;
 }
 
 button{
-    color:orange;
-    background-color: blue;
+    color:#ffa500;
+    background-color: #00f;
 }
 
 p {
