@@ -3,6 +3,8 @@ h1 {
     text-align: center;
     text-decoration: underline overline;
     letter-spacing: 25px;
+    font-size: 80px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     
 
 }
@@ -15,9 +17,13 @@ a {
 h2 {
     text-decoration: underline dotted red;
     letter-spacing: 10px;
+    font-size: 40px;
+    font-family: Bondoni MT, fantasy;
 }
 
 p {
     line-height: 2.5;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
