@@ -8,4 +8,25 @@ div {
     width: 200px;
     height: 500px;
     background-color: coral;
+
+}
+
+#one{
+    background-color: red;
+    border: 10px solid black;
+    border-radius: 50%;
+}
+
+#two{
+    background-color: green;
+    border: 5px dashed rgb(136, 32, 136);
+    box-sizing: border-box;
+    
+}
+
+#three{
+    background-color: blue;
+    border: 10px solid black;
+    border-left-style: dashed;
+
 }
