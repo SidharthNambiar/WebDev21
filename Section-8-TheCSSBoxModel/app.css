@@ -30,3 +30,10 @@ div {
     border-left-style: dashed;
 
 }
+
+button {
+    color: white;
+    background-color: blue;
+    width: 500px;
+    padding: 10px 20px;
+}
