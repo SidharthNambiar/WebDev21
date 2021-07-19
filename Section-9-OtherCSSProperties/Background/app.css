@@ -1,6 +1,6 @@
 
 body{
-    background-color: rgb(245, 168, 3);
+    background-color: #f5a803;
 }
 section {
     width: 80%;
@@ -15,10 +15,13 @@ section {
 }
 
 h1 {
-    font-size: 150px;
+    font-size: 125px;
     text-align:center;
-    text-shadow: black -6px 6px;
+    text-shadow: rgb(34, 95, 74) -4px 4px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: lighter;
-    color:white;
+    color: #f5a803;
+    /* background-color: chocolate; */
+    opacity: 0.9;
+    padding-top: .5em;
 }
