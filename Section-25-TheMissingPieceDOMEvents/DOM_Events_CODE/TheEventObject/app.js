@@ -1,31 +1,69 @@
-document.querySelector('button').addEventListener('click', function (evt) {
-    console.log(evt)
-})
+const btn = document.querySelector("button");
+const input = document.querySelector("input");
 
-// const input = document.querySelector('input');
-// input.addEventListener('keydown', function (e) {
-//     console.log(e.key)
-//     console.log(e.code)
-// })
-// input.addEventListener('keyup', function () {
-//     console.log("KEYUP")
+btn.addEventListener("click", (evt) => {
+  console.log("clicked me");
+  console.log(evt.key);
+});
+
+//  input.addEventListener('keydown', (q)=>{
+//      console.log('keyDOWN')
+//      console.log(q.code)
+//      console.log(q.key)
+//  })
+
+//  input.addEventListener('keyup', (q)=>{
+//     // console.log('keyUP')
+//     // console.log(q.key)
 // })
 
-window.addEventListener('keydown', function (e) {
-    switch (e.code) {
-        case 'ArrowUp':
-            console.log("UP!");
-            break;
-        case 'ArrowDown':
-            console.log("DOWN!");
-            break;
-        case 'ArrowLeft':
-            console.log("LEFT!");
-            break;
-        case 'ArrowRight':
-            console.log("RIGHT!");
-            break
-        default:
-            console.log("IGNORED!")
-    }
-})
+input.addEventListener("keydown", (e) => {
+  switch (e.code) {
+    case "ArrowUp":
+      console.log("UP");
+      break;
+    case "ArrowDown":
+      console.log("DOWN");
+      break;
+    case "ArrowLeft":
+      console.log("LEFT");
+      break;
+    case "ArrowRight":
+      console.log("RIGHT");
+      break;
+    default:
+      console.log("IGNORED");
+  }
+});
+
+// document.querySelector('button').addEventListener('click', function (evt) {
+//     console.log(evt)
+// })
+
+// // const input = document.querySelector('input');
+// // input.addEventListener('keydown', function (e) {
+// //     console.log(e.key)
+// //     console.log(e.code)
+// // })
+// // input.addEventListener('keyup', function () {
+// //     console.log("KEYUP")
+// // })
+
+// window.addEventListener('keydown', function (e) {
+//     switch (e.code) {
+//         case 'ArrowUp':
+//             console.log("UP!");
+//             break;
+//         case 'ArrowDown':
+//             console.log("DOWN!");
+//             break;
+//         case 'ArrowLeft':
+//             console.log("LEFT!");
+//             break;
+//         case 'ArrowRight':
+//             console.log("RIGHT!");
+//             break
+//         default:
+//             console.log("IGNORED!")
+//     }
+// })
