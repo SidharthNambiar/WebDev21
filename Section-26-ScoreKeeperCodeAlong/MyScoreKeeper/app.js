@@ -44,6 +44,8 @@ maxScore.addEventListener("change", (e) => {
 });
 
 resetButton.addEventListener("click", (e) => {
+  
+  console.dir(e)
   playerOneTally = 0;
   playerTwoTally = 0;
 
