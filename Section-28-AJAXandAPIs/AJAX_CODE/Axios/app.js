@@ -1,3 +1,39 @@
+console.log("linked");
+
+const button = document.querySelector("button");
+const ul = document.querySelector("#jokes");
+
+const getNewJoke = async () => {
+  try {
+    const config = { headers: { Accept: "application/json" } };
+    const res = await axios.get("https://icanhazdadjoke.com/", config);
+    return res.data.joke;
+  } catch {
+    return "No Joke available";
+  }
+};
+
+const displayJoke = async () => {
+  
+
+  let joke = await getNewJoke();
+  console.log(joke);
+
+  const newLI = document.createElement('LI')
+  newLI.innerText = joke;
+  ul.append(newLI)
+};
+
+const removeJoke = (e) =>{
+    console.dir(e)
+    e.target.innerText = '';
+    ul.removeChild(e.target)
+}
+
+ul.addEventListener("click", removeJoke)
+
+button.addEventListener("click", displayJoke);
+
 // fetch('https://api.cryptonator.com/api/ticker/btc-usd')
 //     .then(res => {
 //         console.log("RESPONSE, WAITING TO PARSE...", res)
@@ -13,40 +49,40 @@
 
 // axios.get('https://api.cryptonator.com/api/ticker/btc-usd')
 //     .then(res => {
-//         console.log(res.data.ticker.price)
+//         console.log("current price:", res.data.ticker.price)
 //     })
 //     .catch(err => {
 //         console.log("ERROR!", err)
 //     })
 
-const fetchBitcoinPrice = async () => {
-    try {
-        const res = await axios.get('https://api.cryptonator.com/api/ticker/btc-usd')
-        console.log(res.data.ticker.price)
-    } catch (e) {
-        console.log("ERROR!", e)
-    }
-}
+// const fetchBitcoinPrice = async () => {
+//     try {
+//         const res = await axios.get('https://api.cryptonator.com/api/ticker/btc-usd')
+//         console.log(res.data.ticker.price)
+//     } catch (e) {
+//         console.log("ERROR!", e)
+//     }
+// }
 
-const jokes = document.querySelector('#jokes');
-const button = document.querySelector('button');
+// const jokes = document.querySelector('#jokes');
+// const button = document.querySelector('button');
 
-const addNewJoke = async () => {
-    const jokeText = await getDadJoke();
-    const newLI = document.createElement('LI');
-    newLI.append(jokeText);
-    jokes.append(newLI)
-}
+// const addNewJoke = async () => {
+//     const jokeText = await getDadJoke();
+//     const newLI = document.createElement('LI');
+//     newLI.append(jokeText);
+//     jokes.append(newLI)
+// }
 
-const getDadJoke = async () => {
-    try {
-        const config = { headers: { Accept: 'application/json' } }
-        const res = await axios.get('https://icanhazdadjoke.com/', config)
-        return res.data.joke;
-    } catch (e) {
-        return "NO JOKES AVAILABLE! SORRY :("
-    }
+// const getDadJoke = async () => {
+//     try {
+//         const config = { headers: { Accept: 'application/json' } }
+//         const res = await axios.get('https://icanhazdadjoke.com/', config)
+//         return res.data.joke;
+//     } catch (e) {
+//         return "NO JOKES AVAILABLE! SORRY :("
+//     }
 
-}
+// }
 
-button.addEventListener('click', addNewJoke)
+// button.addEventListener('click', addNewJoke)
